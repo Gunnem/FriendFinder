@@ -1,4 +1,4 @@
-var friendData 		= require('../data/friends');
+var friendData 		= require('../data/friends.js');
 var path 			= require('path');
 
 // API GET Requests - when users "visit" a page. 
@@ -8,7 +8,7 @@ var totalDifference = 0;
 
 module.exports = function(app){
 	app.get('/api/friends', function(req, res){
-		res.json(friends);
+		res.json(friendData);
 	});
 
 //API POST Request-handles when user submits a form & thus submits data to the server.
